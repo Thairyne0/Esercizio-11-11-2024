@@ -19,3 +19,26 @@ const user1 = new User("Tommaso", "Cesaro", 22, "Cardito");
 const user2 = new User("Marco", "Concilio", 23, "Secondigliano");
 
 user2.confronto(user1, user2);
+
+class Pet {
+  constructor(petName, ownerName, species, breed) {
+    this.name = petName;
+    this.surname = ownerName;
+    this.species = species;
+    this.breed = breed;
+  }
+
+  stessoPadroneDomanda(petOne, petTwo) {
+    if (petOne.ownerName === petTwo.ownerName) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+const pet1 = new Pet("Stephy", "Tommaso", "Cane", "Messicano");
+
+const pet2 = new Pet("Ditto", "Tommaso", "Pokemon", "Bho");
+
+console.log(pet1.stessoPadroneDomanda(pet1, pet2));
